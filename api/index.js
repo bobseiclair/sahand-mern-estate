@@ -1,4 +1,5 @@
 import express from 'express'
+import userRouter from './routes/user.route.js'
 
 import dotenv from 'dotenv'
 dotenv.config()
@@ -13,3 +14,4 @@ const app = express()
 
 app.listen(port, () => console.log(`Server en marche sur le port ${port}`))
 
+app.use('/api/user', userRouter)
