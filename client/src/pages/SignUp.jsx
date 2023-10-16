@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import { useState, useNavigate } from "react";
+import { useNavigate, Link } from 'react-router-dom'
+import { useState } from "react";
 
 export default function SignUp() {
   const [formData, setFormData] = useState({})
@@ -26,13 +26,13 @@ export default function SignUp() {
         
         const data = await res.json()
         console.log(data)
-
-        if (!data.success) {
+        
+        if (data.success === false) {
           setLoading(false)
           setError(data.message)
           return
         }
-
+        
         setLoading(false)
         setError(null)
         //
