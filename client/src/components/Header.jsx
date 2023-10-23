@@ -35,15 +35,9 @@ const { currentUser } = useSelector(state => state.user)
                         (
                         <img className="rounded-full h-7 w-7 object-cover" 
                                 src={currentUser.avatar} alt='profile picture' />   
-                        ):
-                        (
-                        <li className="text-slate-700 hover:underline">
-                                SignIn
-                            </li>
-                            
-                        )
+                        ):( <li className="text-slate-700 hover:underline">Sign In</li> )
                     }
-                 </Link> 
+                </Link> 
             </ul>
         </div>
     </header>
